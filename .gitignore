@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Claude Code local settings (keep .claude/agents/ for shared configs)
+.claude/settings.local.json
