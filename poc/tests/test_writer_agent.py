@@ -156,13 +156,14 @@ class TestKeywordIntegration:
                 kw_count += 1
         assert kw_count >= 3, f"Only {kw_count}/3 headlines contain primary keywords"
 
-    def test_validator_warns_on_low_keyword_count(self):
+    def test_validator_errors_on_low_keyword_count(self):
         no_kw_headlines = [f"Generic Headline {i}" for i in range(15)]
         validator = ContentValidator()
         result = validator.validate_headlines(no_kw_headlines, SAMPLE_PRIMARY_KEYWORDS)
-        # Should have a warning about low keyword count
-        kw_warnings = [w for w in result.warnings if "keyword" in w.issue.lower()]
-        assert len(kw_warnings) > 0
+        # Should have an error about low keyword count (triggers retry)
+        kw_errors = [e for e in result.errors if "keyword" in e.issue.lower()]
+        assert len(kw_errors) > 0
+        assert not result.passed
 
 
 class TestComplianceScanning:

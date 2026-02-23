@@ -114,7 +114,7 @@ class ContentValidator:
                 result.add(ValidationIssue(
                     field="headlines",
                     issue=f"Only {kw_count}/3 minimum headlines contain primary keywords",
-                    severity="warning",
+                    severity="error",
                 ))
 
         return result

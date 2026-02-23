@@ -41,9 +41,24 @@ def _build_system_prompt(brief: dict) -> str:
     if isinstance(compliance, dict):
         salary_required = compliance.get("salary_disclosure") == "REQUIRED"
 
+    # Extract critical facts to anchor the model
+    job_title = brief.get("job_title", "")
+    compensation = brief.get("compensation", "")
+    primary_keywords = brief.get("primary_keywords", [])
+    kw_list = "\n".join(f"  - {kw}" for kw in primary_keywords[:10])
+
     return f"""You are the Writer Agent for Aquent's AI-powered recruitment advertising system.
 
 Your job is to generate Google Ads Responsive Search Ad (RSA) content based on the Strategy Brief provided.
+
+## CRITICAL FACTS — Use these EXACTLY as given, do NOT change or invent alternatives
+
+- **Exact Job Title**: {job_title}
+- **Exact Compensation**: {compensation}
+- **Primary Keywords (must appear in 4+ headlines)**:
+{kw_list}
+
+You MUST use the exact job title "{job_title}" in your headlines — do NOT substitute synonyms like "Manager" for "Designer" or change the title in any way. When you include salary/compensation, use the EXACT figures from the brief ({compensation}) — do NOT invent different numbers.
 
 ## Google Ads RSA Specifications
 
@@ -72,13 +87,14 @@ You MUST output ONLY valid JSON with this exact structure:
 
 ## Content Guidelines
 
-1. Include primary keywords naturally in at least 3-4 headlines
-2. Each description should work independently with any headline combination
-3. Include at least 2 headlines with a call-to-action (Apply Now, Learn More, etc.)
-4. {"Include salary range in at least 1 headline and 1 description (LEGALLY REQUIRED)" if salary_required else "Salary inclusion is optional"}
-5. If client is marked CONFIDENTIAL, do NOT include the client name in any ad content
-6. Vary messaging angles across headlines: role-focused, benefit-focused, CTA-focused, salary/comp
-7. Front-load key information in descriptions (candidates decide in 14 seconds)
+1. Include primary keywords naturally in at least 4 headlines — this is critical for ad relevance and Quality Score
+2. Use the EXACT job title "{job_title}" in at least 5 headlines (with variations like adding location, salary, or CTA around it)
+3. Each description should work independently with any headline combination
+4. Include at least 2 headlines with a call-to-action (Apply Now, Learn More, etc.)
+5. {"Include the EXACT salary range ({}) in at least 1 headline and 1 description — this is LEGALLY REQUIRED for this job location".format(compensation) if salary_required else "Salary inclusion is optional"}
+6. If client is marked CONFIDENTIAL, do NOT include the client name in any ad content
+7. Vary messaging angles across headlines: job-title-focused, benefit-focused, CTA-focused, salary/comp, location-focused
+8. Front-load key information in descriptions (candidates decide in 14 seconds)
 
 ## Character Counting
 
@@ -97,17 +113,25 @@ def _build_user_prompt(brief: dict) -> str:
     import yaml
     brief_yaml = yaml.dump(brief, default_flow_style=False, sort_keys=False)
 
+    job_title = brief.get("job_title", "")
+    compensation = brief.get("compensation", "")
+    primary_keywords = brief.get("primary_keywords", [])
+    kw_examples = ", ".join(f'"{kw}"' for kw in primary_keywords[:5])
+
     return f"""Generate RSA ad content based on this Strategy Brief:
 
 {brief_yaml}
 
-Remember:
-- Exactly {RSA_HEADLINE_COUNT} headlines (max {RSA_HEADLINE_MAX_CHARS} chars each)
-- Exactly {RSA_DESCRIPTION_COUNT} descriptions (max {RSA_DESCRIPTION_MAX_CHARS} chars each)
-- Exactly {RSA_DISPLAY_PATH_COUNT} display paths (max {RSA_DISPLAY_PATH_MAX_CHARS} chars each)
-- All unique, no duplicates
-- Include primary keywords in 3+ headlines
-- Check character counts carefully
+## MANDATORY CHECKLIST — verify before outputting:
+
+1. Exactly {RSA_HEADLINE_COUNT} headlines, each ≤{RSA_HEADLINE_MAX_CHARS} chars — COUNT CHARACTERS
+2. Exactly {RSA_DESCRIPTION_COUNT} descriptions, each ≤{RSA_DESCRIPTION_MAX_CHARS} chars
+3. Exactly {RSA_DISPLAY_PATH_COUNT} display paths, each ≤{RSA_DISPLAY_PATH_MAX_CHARS} chars
+4. Job title "{job_title}" appears in at least 5 headlines — do NOT substitute with synonyms
+5. Primary keywords appear in at least 4 headlines (e.g., {kw_examples})
+6. Salary "{compensation}" is quoted EXACTLY when used — do NOT change the numbers
+7. All headlines unique, all descriptions unique
+8. No compliance violations
 
 Output ONLY the JSON object."""
 
