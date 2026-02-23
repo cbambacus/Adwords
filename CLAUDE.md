@@ -80,15 +80,56 @@ The system receives job data from Cloudwall containing:
 Adwords/
 ├── CLAUDE.md              # This file - project overview and guidance
 ├── Architecture/          # System specification documents
-│   └── system-overview.md # High-level architecture documentation
+│   ├── system-overview.md # High-level architecture documentation
+│   └── strategy-agent-rulebook.md # Strategy Agent decision framework
 ├── Research/              # Background research and primers
 │   ├── chatgpt-primer.md  # Google Ads fundamentals
 │   ├── gemini-primer.md   # AI optimization strategy (3 phases)
+│   ├── recruitment-advertising-resources.md # Recruitment-specific research
 │   └── *-sources.md/csv   # Curated research sources
+├── Knowledge-Base/        # Strategy Agent reference materials
+│   ├── platform-specs/    # Character limits, formats, rules per platform
+│   ├── candidate-psychology/ # Messaging by seniority, function, candidate type
+│   ├── compliance/        # EEOC, salary transparency, platform policies
+│   └── benchmarks/        # Performance data (populated by Optimizer)
+├── job-order-test.md      # Sample Cloudwall job order for testing
 └── AI-Ads-flowchart.png   # Visual architecture diagram
 ```
 
 **Note**: The flowchart shows "Crosswall" which should be "Cloudwall" - image update pending.
+
+## Strategy Agent Resources
+
+The Strategy Agent uses three key resources to make decisions and guide the Writer Agent:
+
+### 1. Recruitment Advertising Research
+**File:** `Research/recruitment-advertising-resources.md`
+
+Key insights from LinkedIn, Indeed, Appcast, and Google:
+- Optimal job ad length: 201-400 words (8-8.5% apply rate)
+- Salary transparency increases applications by 20-30%
+- Remote work is #1 candidate priority (63%), drives 3x more applications
+- Candidates decide in 14 seconds whether to continue reading
+
+### 2. Knowledge Base
+**Location:** `Knowledge-Base/`
+
+Structured reference materials:
+- **platform-specs/**: Google Ads, LinkedIn, Indeed, Meta ad specifications
+- **candidate-psychology/**: Messaging strategies by seniority, function, active/passive status
+- **compliance/**: EEOC guidelines, state salary transparency laws, platform policies
+- **benchmarks/**: Template for Optimizer Agent to populate with performance data
+
+### 3. Strategy Agent Rulebook
+**File:** `Architecture/strategy-agent-rulebook.md`
+
+Comprehensive decision framework including:
+- Input processing rules (classify seniority, role type, urgency)
+- Platform selection decision tree
+- Budget allocation formulas with urgency multipliers
+- Writer Agent guidance template (YAML-structured brief)
+- Keyword strategy rules (primary/secondary/negative)
+- Guardrails (CPC caps, human approval thresholds, compliance checks)
 
 ## Working with This Repository
 

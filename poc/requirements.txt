@@ -1,0 +1,6 @@
+anthropic              # Claude API client
+google-ads             # Google Ads API client
+pyyaml                 # YAML parsing for Strategy Brief
+rich                   # Terminal output (tables, colors, progress)
+pydantic               # Input validation / data models
+pytest                 # Test runner
