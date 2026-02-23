@@ -1,0 +1,56 @@
+{
+  "_description": "State-by-state salary transparency requirements extracted from Knowledge-Base/compliance/salary-transparency.md. Used to validate that ad copy includes salary information when legally required.",
+  "_usage": "Look up job location state. If state is in 'required' list and employer meets coverage threshold, salary MUST appear in at least one ad asset.",
+
+  "salary_required_states": {
+    "CA": {
+      "state": "California",
+      "effective": "2023-01-01",
+      "coverage": "15+ employees",
+      "requirement": "Pay scale in job posting",
+      "penalties": "$100-$10,000 per violation"
+    },
+    "CO": {
+      "state": "Colorado",
+      "effective": "2021-01-01",
+      "coverage": "1+ employees",
+      "requirement": "Salary/range + benefits in posting",
+      "penalties": "$500-$10,000 per violation"
+    },
+    "NY": {
+      "state": "New York",
+      "effective": "2023-09-17",
+      "coverage": "4+ employees",
+      "requirement": "Min/max annual salary or hourly range",
+      "penalties": "Up to $1,000 first, $3,000 third+"
+    },
+    "WA": {
+      "state": "Washington",
+      "effective": "2023-01-01",
+      "coverage": "15+ employees",
+      "requirement": "Wage scale/range + benefits",
+      "penalties": "Case-by-case"
+    },
+    "HI": {
+      "state": "Hawaii",
+      "effective": "2024-01-01",
+      "coverage": "50+ employees",
+      "requirement": "Hourly rate or range in posting",
+      "penalties": "Civil penalties"
+    }
+  },
+
+  "remote_job_rules": {
+    "remote_anywhere_us": "Apply strictest state rules (CA/CO/NY). Always include salary.",
+    "remote_limited_states": "Comply with listed states' requirements.",
+    "recommendation": "Include salary range in ALL postings for simplicity and compliance."
+  },
+
+  "nyc_additional": {
+    "effective": "2022-11-01",
+    "coverage": "4+ employees",
+    "requirement": "Min/max salary in posting",
+    "penalties": "Up to $250,000 per violation",
+    "note": "NYC law is separate from and in addition to NY State law"
+  }
+}

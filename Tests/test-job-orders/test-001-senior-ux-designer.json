@@ -1,0 +1,22 @@
+{
+  "job_id": "TEST-001",
+  "job_title": "Senior UX Designer",
+  "job_description": "We're seeking a Senior UX Designer to lead the redesign of our flagship mobile banking application. You'll conduct user research, create wireframes and prototypes, and collaborate closely with product managers and engineers. The ideal candidate has 5+ years of experience in UX design, proficiency in Figma, and a portfolio demonstrating complex B2C application work. Experience with accessibility standards (WCAG 2.1) and design systems is highly valued. You will mentor junior designers and contribute to our growing design practice. This role involves presenting design concepts to stakeholders and iterating based on feedback. Strong communication skills and the ability to translate business requirements into intuitive user experiences are essential.",
+  "salary": {
+    "min": 130000,
+    "max": 155000,
+    "currency": "USD",
+    "type": "annual"
+  },
+  "location": {
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA"
+  },
+  "work_arrangement": "hybrid",
+  "client": "FinTech Innovations Inc.",
+  "employment_type": "contract-to-hire",
+  "duration_months": 6,
+  "start_date": "2026-03-15",
+  "additional_notes": "Client prefers candidates with fintech or banking experience. Team is 3 days in-office (Tue-Thu). Budget has some flexibility for exceptional candidates. Urgent fill - client interviewing immediately."
+}

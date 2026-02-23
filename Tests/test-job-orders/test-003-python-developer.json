@@ -1,0 +1,17 @@
+{
+  "job_id": "TEST-003",
+  "job_title": "Python Developer",
+  "job_description": "Join our engineering team as a Python Developer building data pipeline infrastructure for our analytics platform. You will design and implement ETL processes using Python, Apache Airflow, and AWS services including S3, Lambda, and Redshift. The role requires 3-5 years of Python development experience, strong SQL skills, and experience with cloud infrastructure. You will participate in code reviews, write unit tests, and contribute to architectural decisions. Experience with Docker, Kubernetes, and CI/CD pipelines is a plus. Our team follows agile methodologies with two-week sprints and values clean, well-documented code. You will collaborate with data scientists and analysts to understand data requirements and optimize pipeline performance.",
+  "salary": null,
+  "location": {
+    "city": null,
+    "state": null,
+    "country": "USA"
+  },
+  "work_arrangement": "remote",
+  "client": "DataStream Analytics",
+  "employment_type": "full-time",
+  "duration_months": null,
+  "start_date": "2026-03-01",
+  "additional_notes": "Open to candidates anywhere in the US. Competitive compensation but client has not provided specific range."
+}

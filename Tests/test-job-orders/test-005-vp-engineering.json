@@ -1,0 +1,22 @@
+{
+  "job_id": "TEST-005",
+  "job_title": "VP of Engineering",
+  "job_description": "We are seeking a VP of Engineering to lead our technology organization of 85 engineers across four product teams. This executive will report directly to the CTO and be responsible for technical strategy, engineering culture, and delivery excellence. The ideal candidate has 15+ years of software engineering experience, including 8+ years in engineering leadership managing teams of 50 or more. They have led cloud-native transformations, established engineering best practices at scale, and have experience with public company governance requirements. The VP will drive our platform modernization initiative, transitioning legacy systems to a microservices architecture on AWS. They will also be responsible for recruiting and retaining top engineering talent, establishing career frameworks, and fostering an inclusive engineering culture. Experience in financial services or regulated industries is strongly preferred. Strong communication skills are essential for presenting to the board and collaborating with cross-functional executives.",
+  "salary": {
+    "min": 280000,
+    "max": 350000,
+    "currency": "USD",
+    "type": "annual"
+  },
+  "location": {
+    "city": "New York",
+    "state": "NY",
+    "country": "USA"
+  },
+  "work_arrangement": "hybrid",
+  "client": "A leading financial services firm",
+  "employment_type": "full-time",
+  "duration_months": null,
+  "start_date": "2026-03-01",
+  "additional_notes": "ASAP start preferred. Board-approved headcount. Relocation package available. Highly confidential search - do not name the client."
+}

@@ -1,0 +1,22 @@
+{
+  "job_id": "TEST-004",
+  "job_title": "Junior Graphic Designer",
+  "job_description": "Entry-level graphic designer needed for our creative agency. Must know Adobe Creative Suite. Will create social media graphics, basic print collateral, and assist senior designers with client projects. Portfolio required.",
+  "salary": {
+    "min": 40000,
+    "max": 50000,
+    "currency": "USD",
+    "type": "annual"
+  },
+  "location": {
+    "city": "Denver",
+    "state": "CO",
+    "country": "USA"
+  },
+  "work_arrangement": "onsite",
+  "client": "Confidential",
+  "employment_type": "full-time",
+  "duration_months": null,
+  "start_date": "2026-04-15",
+  "additional_notes": null
+}

@@ -1,0 +1,22 @@
+{
+  "job_id": "TEST-002",
+  "job_title": "Marketing Coordinator",
+  "job_description": "We are looking for an enthusiastic Marketing Coordinator to support our growing marketing team. This entry-level position involves managing social media calendars, coordinating email campaigns, assisting with event planning, and tracking campaign performance metrics. The ideal candidate has 0-2 years of experience in marketing or a related field, familiarity with social media platforms and email marketing tools such as Mailchimp or HubSpot, and strong organizational skills. A bachelor's degree in marketing, communications, or a related field is preferred but not required. You will work closely with the Marketing Manager and gain exposure to all aspects of digital marketing including SEO, content creation, and paid advertising.",
+  "salary": {
+    "min": 45000,
+    "max": 55000,
+    "currency": "USD",
+    "type": "annual"
+  },
+  "location": {
+    "city": "Austin",
+    "state": "TX",
+    "country": "USA"
+  },
+  "work_arrangement": "onsite",
+  "client": "GrowthTech Solutions",
+  "employment_type": "full-time",
+  "duration_months": null,
+  "start_date": "2026-04-01",
+  "additional_notes": "Looking for someone eager to learn. Team is small and collaborative. No remote option available."
+}

@@ -1,0 +1,98 @@
+{
+  "_description": "Prohibited terms extracted from Knowledge-Base/compliance/eeoc-guidelines.md for automated compliance scanning of ad copy. Terms are case-insensitive. Some terms are only prohibited in specific contexts (noted in 'context' field).",
+  "_usage": "Scan all headlines and descriptions against these terms. Flag any matches for review. Context-dependent terms require additional analysis.",
+
+  "age_discrimination": {
+    "prohibited_exact": [
+      "young",
+      "digital native",
+      "fresh out of college",
+      "young professionals",
+      "young team"
+    ],
+    "prohibited_phrases": [
+      "recent graduate",
+      "recent grad",
+      "maximum years experience",
+      "no more than * years"
+    ],
+    "context_dependent": [
+      {
+        "term": "energetic",
+        "prohibited_context": "when implying youth or age",
+        "note": "Acceptable if describing role demands without age implication"
+      }
+    ]
+  },
+
+  "gender_discrimination": {
+    "prohibited_exact": [
+      "salesman",
+      "saleswoman",
+      "waitress",
+      "waiter",
+      "chairman",
+      "manpower",
+      "guys",
+      "gals"
+    ],
+    "prohibited_phrases": [
+      "he will",
+      "she will",
+      "he/she",
+      "his/her"
+    ]
+  },
+
+  "national_origin_discrimination": {
+    "prohibited_exact": [
+      "American only",
+      "native English speaker",
+      "no foreign accents"
+    ],
+    "prohibited_phrases": [
+      "must be U.S. citizen",
+      "must be US citizen",
+      "citizens only"
+    ],
+    "exceptions": [
+      "Government positions may require citizenship - verify on a case-by-case basis"
+    ]
+  },
+
+  "religion_discrimination": {
+    "prohibited_exact": [
+      "Christian values"
+    ],
+    "prohibited_phrases": [
+      "must work Sundays"
+    ],
+    "note": "Religious requirements only valid as BFOQ for religious organizations"
+  },
+
+  "disability_discrimination": {
+    "prohibited_phrases": [
+      "no health problems",
+      "physical fitness required",
+      "must be able to stand for",
+      "clean driving record"
+    ],
+    "note": "Physical requirements only valid if essential function of the role"
+  },
+
+  "coded_language": {
+    "flagged_terms": [
+      "cultural fit",
+      "overqualified"
+    ],
+    "note": "These terms can mask bias and should be flagged for human review"
+  },
+
+  "editorial_violations": {
+    "patterns": {
+      "excessive_caps": "Three or more consecutive uppercase words (e.g., APPLY NOW TODAY)",
+      "excessive_punctuation": "Two or more consecutive identical punctuation marks (e.g., !!, ???)",
+      "emoji": "Any emoji characters in text ads"
+    }
+  }
+}
