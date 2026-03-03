@@ -114,7 +114,7 @@ Cloudwall Job Order
     │
     └── Google Ads Campaign
         ├── Campaign Settings
-        │   ├── Name: "Aquent-{job_id}-{role_type}"
+        │   ├── Name: "{job_id}-{role_type}"
         │   ├── Budget: {allocated_daily_budget}
         │   ├── Bidding: Target CPA or Maximize Conversions
         │   ├── Networks: Search Network only (initially)
@@ -315,7 +315,7 @@ credentials:
       - "https://www.googleapis.com/auth/adwords"
 
   customer_id:
-    description: "Aquent's Google Ads customer ID"
+    description: "The company's Google Ads customer ID"
     format: "XXX-XXX-XXXX"
 ```
 
@@ -390,7 +390,7 @@ def generate_campaign(job_order, strategy):
     campaign = Campaign(
         platform_id="google_ads",
         job_order_id=job_order.job_id,
-        name=f"Aquent-{job_order.job_id}-{classify_role(job_order.job_title)}",
+        name=f"{job_order.job_id}-{classify_role(job_order.job_title)}",
         status="DRAFT"
     )
 

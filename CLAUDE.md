@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This repository contains the **system specification** for Aquent's AI-powered recruitment advertising system. The system automates job ad creation, placement, and optimization across multiple advertising platforms with a continuous learning feedback loop.
+This repository contains the **system specification** for the company's AI-powered recruitment advertising system. The system automates job ad creation, placement, and optimization across multiple advertising platforms with a continuous learning feedback loop.
 
 **Current Phase**: Architecture Documentation
 

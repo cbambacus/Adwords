@@ -47,7 +47,7 @@ def _build_system_prompt(brief: dict) -> str:
     primary_keywords = brief.get("primary_keywords", [])
     kw_list = "\n".join(f"  - {kw}" for kw in primary_keywords[:10])
 
-    return f"""You are the Writer Agent for Aquent's AI-powered recruitment advertising system.
+    return f"""You are the Writer Agent for the company's AI-powered recruitment advertising system.
 
 Your job is to generate Google Ads Responsive Search Ad (RSA) content based on the Strategy Brief provided.
 

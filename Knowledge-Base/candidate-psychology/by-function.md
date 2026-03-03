@@ -2,7 +2,7 @@
 
 ## Overview
 
-Different professional functions have distinct cultures, values, and decision-making criteria. This guide provides messaging frameworks for Aquent's primary talent categories: Creative, Technical, and Corporate functions.
+Different professional functions have distinct cultures, values, and decision-making criteria. This guide provides messaging frameworks for the company's primary talent categories: Creative, Technical, and Corporate functions.
 
 ---
 

@@ -41,7 +41,7 @@ def _build_system_prompt() -> str:
     compliance_salary = _load_text(KNOWLEDGE_BASE_DIR / "compliance" / "salary-transparency.md")
     benchmarks = _load_text(KNOWLEDGE_BASE_DIR / "benchmarks" / "recruitment-benchmarks.md")
 
-    return f"""You are the Strategy Agent for Aquent's AI-powered recruitment advertising system.
+    return f"""You are the Strategy Agent for the company's AI-powered recruitment advertising system.
 
 Your job is to analyze a job order and produce a Strategy Brief in YAML format that will guide the Writer Agent in creating Google Ads Responsive Search Ads (RSAs).
 

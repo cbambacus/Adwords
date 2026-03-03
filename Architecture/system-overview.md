@@ -1,6 +1,6 @@
 # System Architecture Overview
 
-Aquent AI-Powered Recruitment Advertising System
+AI-Powered Recruitment Advertising System
 
 ## Executive Summary
 

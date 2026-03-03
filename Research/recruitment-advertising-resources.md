@@ -382,4 +382,4 @@ IF urgent hiring need:
 
 ---
 
-*Document compiled for Aquent AI Recruitment Advertising System - Strategy Agent Reference*
+*Document compiled for AI Recruitment Advertising System - Strategy Agent Reference*

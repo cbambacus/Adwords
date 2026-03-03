@@ -22,12 +22,12 @@ A Manager Account lets you manage multiple Google Ads accounts from one place.
 2. Click **Create a manager account**
 3. Sign in with a Google account (use a company/service account, not personal)
 4. Fill in:
-   - Account name: "Aquent Ads Automation" (or similar)
+   - Account name: "Ads Automation" (or similar)
    - Primary use: "Manage other people's accounts"
    - Country and timezone
 5. Complete the setup
 
-**Note:** If Aquent already has a Google Ads account, you'll link it under this manager account later.
+**Note:** If the company already has a Google Ads account, you'll link it under this manager account later.
 
 ---
 
@@ -39,7 +39,7 @@ The Google Ads API uses Google Cloud for OAuth authentication.
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Click the project dropdown (top left) → **New Project**
-3. Name it: "Aquent Ads Automation"
+3. Name it: "Ads Automation"
 4. Click **Create**
 
 ### 2.2 Enable the Google Ads API
@@ -53,7 +53,7 @@ The Google Ads API uses Google Cloud for OAuth authentication.
 1. Go to **APIs & Services** → **OAuth consent screen**
 2. Select **Internal** (if using Google Workspace) or **External**
 3. Fill in:
-   - App name: "Aquent Ads Automation"
+   - App name: "Ads Automation"
    - User support email: your email
    - Developer contact: your email
 4. Click **Save and Continue**
@@ -66,7 +66,7 @@ The Google Ads API uses Google Cloud for OAuth authentication.
 1. Go to **APIs & Services** → **Credentials**
 2. Click **Create Credentials** → **OAuth client ID**
 3. Application type: **Desktop app** (for initial setup/testing)
-4. Name: "Aquent Ads CLI"
+4. Name: "Ads CLI"
 5. Click **Create**
 6. **Download the JSON file** - save as `client_secret.json`
 
