@@ -1,6 +1,6 @@
 # AI Recruitment Advertising System
 
-Aquent's AI-powered recruitment advertising system that automates job ad creation, placement, and optimization across multiple advertising platforms.
+AI-powered recruitment advertising system that automates job ad creation, placement, and optimization across multiple advertising platforms.
 
 ## What It Does
 
